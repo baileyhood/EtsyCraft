@@ -1,0 +1,18 @@
+<h1>Crafty Cart</h1>
+
+
+<label> Filter Results: <input ng-model="searchText"> </label>
+
+<div ng-repeat = "listings in listing | filter:searchText">
+  <h4>Title: {{listing.title}}</h3>
+  <h6>Price: {{listing.price}}</h3>
+</div>
+
+<div ng-repeat = "listing in listings"class="active-listings-container">
+  <h4>Title: {{listing.title}}</h3>
+  <h6>Price: {{listing.price}}</h3>
+  <img src="{{listing.MainImage.url_170x135}}" alt="" />
+  <h4><a href="{{listing.url}}">See on Etsy</a></h3>
+  <button type="submit" name="cart-button">Add to Cart</button>
+  <a href="/#/listings/{{listing.listing_id}}"><button type="submit" name="show-button">See Details</button></a>
+</div>

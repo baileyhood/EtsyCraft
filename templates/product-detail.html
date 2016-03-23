@@ -1,0 +1,9 @@
+<h1>Crafty Cart</h1>
+<div ng-repeat = "listing in singleListings"class="active-listings-container">
+  <h4>Title: {{listing.title}}</h3>
+  <h6>Price: {{listing.price}}</h3>
+  <img src="{{listing.MainImage.url_570xN}}" alt="" />
+  <h4><a href="{{listing.url}}">See on Etsy</a></h3>
+  <button type="submit" name="cart-button">Add to Cart</button>
+  <a href="/#/"><button type="submit" name="button">Go Back to Main Page</button> </a>
+</div>
