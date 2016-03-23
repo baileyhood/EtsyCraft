@@ -1,7 +1,7 @@
 angular
 .module('craftyCart')
 .service('CartService', function ($http, $location){
-  var cartUrl = 'http://tiny-tiny.herokuapp.com/collections/EtsyCrafty';
+  var cartUrl = 'http://tiny-tiny.herokuapp.com/collections/EtsyCrafts';
 
   function getCart (){
     return $http.get(cartUrl);
@@ -9,8 +9,8 @@ angular
   function addToCart (item) {
     return $http.post(cartUrl, item);
   }
-  function removeFromCart () {
-    return $http.delete(cartUrl);
+  function removeFromCart (id) {
+    return $http.delete(cartUrl + '/' + id);
   }
 
   return {

@@ -1,0 +1,10 @@
+<h1>Etsy Shopping Cart</h1>
+<div ng-repeat = "listing in cartItems" class="active-listings-container">
+  <h4>Title: {{listing.title}}</h3>
+  <h6>Price: {{listing.price}}</h3>
+  <h6>Id: {{listing.listing_id}}</h3>
+  <img src="{{listing.MainImage.url_170x135}}" alt="" />
+  <h4><a href="{{listing.url}}">See on Etsy</a></h3>
+  <a href="/#/"><button type="submit" name="button">Go Back to Main Page</button> </a>
+  <button type="submit" ng-click = "deleteItem(listing)"name="delete">Remove Item</button>
+</div>
