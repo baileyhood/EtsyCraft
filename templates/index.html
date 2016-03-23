@@ -13,6 +13,6 @@
   <h6>Price: {{listing.price}}</h3>
   <img src="{{listing.MainImage.url_170x135}}" alt="" />
   <h4><a href="{{listing.url}}">See on Etsy</a></h3>
-  <button type="submit" name="cart-button">Add to Cart</button>
+  <a href="/#/"><button type="submit" ng-click = "addToCart(listing)" name="cart-button">Add to Cart</button> </a>
   <a href="/#/listings/{{listing.listing_id}}"><button type="submit" name="show-button">See Details</button></a>
 </div>

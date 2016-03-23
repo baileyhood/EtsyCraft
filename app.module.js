@@ -9,5 +9,9 @@ angular
       .when ('/listings/:listingId', {
         templateUrl: 'templates/product-detail.html',
         controller: 'ListingController'
+      })
+      .when ('/cart', {
+        templateUrl: 'templates/show-cart.html',
+        controller: 'CartController'
       });
   });
