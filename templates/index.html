@@ -1,18 +1,23 @@
 <h1>Crafty Cart</h1>
 
-
-<label> Filter Results: <input ng-model="searchText"> </label>
-
-<div ng-repeat = "listings in listing | filter:searchText">
-  <h4>Title: {{listing.title}}</h3>
-  <h6>Price: {{listing.price}}</h3>
+<div class="view-cart-container">
+  <a href="/#/cart">View Cart</a>
 </div>
 
-<div ng-repeat = "listing in listings"class="active-listings-container">
-  <h4>Title: {{listing.title}}</h3>
-  <h6>Price: {{listing.price}}</h3>
+
+
+<p ng-show = "show" id="added-to-cart-message inactive">
+  "Added item to cart!"
+</p>
+
+<label> Filter Results: <input ng-model="search.title" placeholder = 'Search By Title'> </label>
+<label> Filter Results: <input ng-model="search.price" placeholder = 'Search By Price'> </label>
+<div ng-repeat = "listing in listings | filter:search:strict" class="active-listings-container">
+  <h4>{{listing.title}}</h3>
+  <h6>{{listing.price}}</h3>
   <img src="{{listing.MainImage.url_170x135}}" alt="" />
   <h4><a href="{{listing.url}}">See on Etsy</a></h3>
-  <a href="/#/cart"><button type="submit" ng-click = "addToCart(listing)" name="cart-button">Add to Cart</button> </a>
-  <a href="/#/listings/{{listing.listing_id}}"><button type="submit" name="show-button">See Details</button></a>
+<button type="submit" ng-model ="hideMessage" ng-click = "addToCart(listing); showMe()"name="cart-button">Add to Cart</button>
+
+<a href="/#/listings/{{listing.listing_id}}"><button type="submit" name="show-button">See Details</button></a>
 </div>
