@@ -1,23 +1,28 @@
-<h1>Crafty Cart</h1>
 
-<div class="view-cart-container">
-  <a href="/#/cart">View Cart</a>
+
+<div class="navigation">
+  <h1>Crafty Cart</h1>
+  <div class="view-cart-container">
+    <a href="/#/cart">View Cart</a>
+  </div>
+
+  <p ng-show = "show" id="added-to-cart-message inactive">
+    "Added item to cart!"
+  </p>
+
+  <label> Filter Results: <input class="form-control" ng-model="search.title" placeholder = 'Search By Title'> </label>
+  <label> Filter Results: <input class="form-control" ng-model="search.price" placeholder = 'Search By Price'> </label>
 </div>
 
 
+<section class ="main-section">
+  <div class ='listing-containers col-md-4' ng-repeat = "listing in listings | filter:search:strict" class="active-listings-container">
+    <h4>{{listing.title}}</h3>
+    <h6>${{listing.price}}</h3>
+    <img src="{{listing.MainImage.url_170x135}}" alt="" />
+    <h4><a href="{{listing.url}}">See on Etsy</a></h3>
+  <button type="submit" ng-model ="hideMessage" ng-click = "addToCart(listing); showMe()"name="cart-button" class ="btn btn-default">Add to Cart</button>
 
-<p ng-show = "show" id="added-to-cart-message inactive">
-  "Added item to cart!"
-</p>
-
-<label> Filter Results: <input ng-model="search.title" placeholder = 'Search By Title'> </label>
-<label> Filter Results: <input ng-model="search.price" placeholder = 'Search By Price'> </label>
-<div ng-repeat = "listing in listings | filter:search:strict" class="active-listings-container">
-  <h4>{{listing.title}}</h3>
-  <h6>{{listing.price}}</h3>
-  <img src="{{listing.MainImage.url_170x135}}" alt="" />
-  <h4><a href="{{listing.url}}">See on Etsy</a></h3>
-<button type="submit" ng-model ="hideMessage" ng-click = "addToCart(listing); showMe()"name="cart-button">Add to Cart</button>
-
-<a href="/#/listings/{{listing.listing_id}}"><button type="submit" name="show-button">See Details</button></a>
-</div>
+  <a href="/#/listings/{{listing.listing_id}}"><button type="submit" name="show-button" class ="btn btn-default">See Details</button></a>
+  </div>
+</section>

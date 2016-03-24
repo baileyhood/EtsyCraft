@@ -15,7 +15,6 @@ $scope.deleteItem = function (obj) {
     var objPlace = $scope.cartItems.findIndex(function(el){
       return el._id === objId;
     });
-    window.glob = objPlace;
     $scope.cartItems.splice(objPlace, 1);
   });
 };
