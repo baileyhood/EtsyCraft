@@ -19,12 +19,8 @@ angular
     });
   };
 
-
   $scope.showMe = function(){
     $scope.show=true;
-  };
-  $scope.hideMe = function(){
-    $scope.show=false;
   };
 
 });

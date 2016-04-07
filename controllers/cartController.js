@@ -2,9 +2,14 @@ angular
 .module('craftyCart')
 .controller ('CartController', function ($scope, CartService) {
 
-  CartService.getCart()
+CartService.getCart()
   .then(function(data) {
     $scope.cartItems = data.data;
+    var total = 0;
+     $scope.cartItems.forEach(function(el){
+       total += parseFloat(el.price);
+     });
+     $scope.subTotal = (total).toFixed(2);
   });
 
 $scope.deleteItem = function (obj) {
