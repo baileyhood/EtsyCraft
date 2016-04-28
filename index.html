@@ -10,6 +10,29 @@
   </head>
   <body ng-app = 'craftyCart'>
 
+
+    <div class="navigation">
+      <div class="inner-container">
+        <div class="col-lg-4">
+          <a href="/#/"><h1 id="title">Crafty Cart</h1></a>
+        </div>
+        <div class="col-lg-6 middle-col">
+          <input class="form-control search-input" ng-model="search.title" placeholder = 'Search By Title'>
+          <input class="form-control search-input" ng-model="search.price" placeholder = 'Search By Price'>
+        </div>
+        <div class="col-lg-2">
+          <div class="view-cart-container">
+            <a href="/#/cart">View Cart</a>
+          </div>
+          <p ng-show = "show" id="added-to-cart-message inactive">
+            "Added item to cart!"
+          </p>
+        </div>
+        </div>
+
+
+    </div>
+
       <ng-view></ng-view>
 
     <script src="bower_components/angular/angular.js" charset="utf-8"></script>

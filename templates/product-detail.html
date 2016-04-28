@@ -1,12 +1,18 @@
-<h1>Crafty Cart</h1>
-
-<div ng-repeat = "listing in singleListings"class="active-listings-container">
-  <h4>Title: {{listing.title}}</h3>
-  <h6>Price: {{listing.price}}</h3>
-  <img src="{{listing.MainImage.url_570xN}}" alt="" />
-  <h4><a href="{{listing.url}}">See on Etsy</a></h3>
-  <p> {{listing.description}}</p>
-  <p> Materials: {{listing.materials[0]}}</p>
-  <button type="submit" name="cart-button" class ="btn btn-default">Add to Cart</button>
-  <a href="/#/"><button type="submit" name="button" class ="btn btn-default">Go Back to Main Page</button> </a>
+<section class ="main-section container">
+<div class ='listing-containers col-md-12'
+  <div ng-repeat = "listing in singleListings"class="active-listings-container">
+    <div class="col-lg-4">
+          <img class="homepage-image" src="{{listing.MainImage.url_570xN}}" alt="" />
+    </div>
+    <div class="col-lg-8">
+      <h4 class="listing-title">Title: {{listing.title}}</h3>
+      <h6>Price: {{listing.price}}</h3>
+      <h4><a href="{{listing.url}}">See on Etsy</a></h3>
+      <p> {{listing.description}}</p>
+      <p> Materials: {{listing.materials[0]}}</p>
+      <button type="submit" name="cart-button" class ="btn btn-default">Add to Cart</button>
+      <a href="/#/"><button type="submit" name="button" class ="btn btn-default">Go Back to Main Page</button> </a>
+    </div>
+  </div>
 </div>
+</section>
