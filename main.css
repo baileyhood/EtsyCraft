@@ -1,7 +1,15 @@
+body {
+  background-color: #f8f8f8;
+}
+#title {
+  float: left;
+  font-family: 'Merriweather', serif;
+  color: #FF7D1A;
+  font-size: 3em;
+}
 .inactive {
   display:none;
 }
-
 .navigation {
   text-align: center;
   text-align: center;
@@ -9,15 +17,51 @@
   position: fixed;
   width: 100%;
   z-index: 1;
-
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.28);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.28);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.28);
+  padding: 25px 0;
+  h1 {
+    margin: 0;
+  }
 }
-
+.inner-container {
+  margin: 0 auto;
+  width: 87%;
+}
 .main-section {
   width: 87%;
   margin: 0 auto;
-  padding-top: 147px;
+  padding-top: 250px;
 }
 
 .listing-containers {
-  vertical-align: top;
+  margin-bottom: 50px;
+  border: 1px solid lightgrey;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: white;
+
+}
+.homepage-image {
+  width: 100%;
+}
+
+.listing-title {
+  color: #222;
+  font-family: 'Merriweather', serif;
+  font-size: 3.5em;
+}
+.view-cart-container {
+  float: right;
+}
+
+.search-input {
+  display: inline-block;
+  width: 49%;
+}
+
+.middle-col {
+  padding: 23px 0;
+
 }
