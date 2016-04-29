@@ -10,7 +10,7 @@ angular
         templateUrl: 'templates/product-detail.html',
         controller: 'ListingController'
       })
-      .when ('/cart', {
+      .when ('/#/cart', {
         templateUrl: 'templates/show-cart.html',
         controller: 'CartController'
       });
