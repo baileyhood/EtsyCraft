@@ -1,18 +1,22 @@
-<section class ="main-section container"
-<div class ='listing-containers col-md-12'>
-    <div ng-repeat = "listing in cartItems" class="listing-containers">
-      <img class="homepage-image" src="{{listing.MainImage.url_170x135}}" alt="" />
-      <h4>Title: {{listing.title}}</h3>
-      <h6>Price: {{listing.price}}</h3>
-      <h6>Id: {{listing.listing_id}}</h3>
-      <h4><a href="{{listing.url}}">See on Etsy</a></h3>
-      <a href="/#/"><button type="submit" name="button" class ="btn btn-default">Go Back to Main Page</button> </a>
-      <button type="submit" ng-click = "deleteItem(listing)"name="delete" class ="btn btn-default">Remove Item</button>
+<section class ="main-section container">
+  <div class="total-div">
+    <p>
+      <h2 class = "your-cart-text">Your Cart:</h2>
+      <h3 class="total-price">Total: {{subTotal}} <h3>
+    </p>
+  </div>
+<div class ='listing-containers col-md-12' ng-repeat = "listing in cartItems">
+    <div  class="active-listings-container">
+      <div class="col-lg-4">
+        <img class="homepage-image" src="{{listing.MainImage.url_570xN}}" alt="" />
+      </div>
+      <div class="col-lg-8">
+          <h4 class="listing-title">{{listing.title}}</h3>
+          <h6 class="price">{{listing.price}}</h3>
+          <h4><a href="{{listing.url}}">See on Etsy</a></h3>
+          <a href="/#/"><button type="submit" name="button" class ="btn btn-default">Go Back to Main Page</button> </a>
+          <button type="submit" ng-click = "deleteItem(listing)"name="delete" class ="btn btn-default">Remove Item</button>
+      </div>
     </div>
-</div>
-<div class="total-div">
-  <p>
-    Total: {{subTotal}}
-  </p>
 </div>
 </section>

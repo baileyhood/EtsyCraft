@@ -1,6 +1,8 @@
 body {
   background-color: #f8f8f8;
+  color: #666666;
 }
+
 #title {
   float: left;
   font-family: 'Merriweather', serif;
@@ -21,9 +23,24 @@ body {
   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.28);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.28);
   padding: 25px 0;
-  h1 {
-    margin: 0;
-  }
+
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.cart-icon {
+  display: block;
+  font-size: 2.5em;
+}
+.price {
+  color: #FF7D1A;
+  font-size: 33px;
 }
 .inner-container {
   margin: 0 auto;
@@ -48,12 +65,13 @@ body {
 }
 
 .listing-title {
-  color: #222;
+  color: #666666;
   font-family: 'Merriweather', serif;
   font-size: 3.5em;
 }
 .view-cart-container {
   float: right;
+  margin-top: 5px;
 }
 
 .search-input {
@@ -64,4 +82,18 @@ body {
 .middle-col {
   padding: 23px 0;
 
+}
+
+@media (max-width: 900px) {
+  .main-section {
+    padding-top: 315px;
+  }
+}
+
+.your-cart-text {
+  float: left;
+}
+.total-price {
+  float: right;
+  color: #FF7D1A;
 }

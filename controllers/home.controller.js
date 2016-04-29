@@ -1,6 +1,6 @@
 angular
 .module('craftyCart')
-.controller('HomeController', function ($scope, CraftyCartService, CartService){
+.controller('HomeController', function ($scope, $rootScope, CraftyCartService, CartService){
 
   function initialLoad () {
     CraftyCartService.getActiveListings()
@@ -12,7 +12,7 @@ angular
   }
   initialLoad();
 
-  $scope.addToCart = function(item) {
+  $rootScope.addToCart = function(item) {
     CartService.addToCart(item)
            .then(function(data) {
              console.log("added item info: ", data);

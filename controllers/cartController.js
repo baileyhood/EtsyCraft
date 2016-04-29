@@ -15,6 +15,7 @@ angular
     .then(function(data) {
       $scope.cartItems = data.data;
       $scope.getPrice();
+      console.log("cart items: ", $scope.cartItems);
     });
 
 $scope.deleteItem = function (obj) {
