@@ -67,7 +67,7 @@ a:hover {
 .listing-title {
   color: #666666;
   font-family: 'Merriweather', serif;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 .view-cart-container {
   float: right;
@@ -96,4 +96,10 @@ a:hover {
 .total-price {
   float: right;
   color: #FF7D1A;
+}
+
+@media (max-width: 967px) {
+.listing-title {
+    font-size: 2em;
+  }
 }
